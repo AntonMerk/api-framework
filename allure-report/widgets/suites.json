@@ -1,15 +1,15 @@
 {
   "total" : 1,
   "items" : [ {
-    "uid" : "b58268f03ae5293bfedfd6d38800dc9f",
-    "name" : "Найти случайного кота, удалить, проверить что удален",
+    "uid" : "f6e1f0e5d69d25a26431200da6c6fe11",
+    "name" : "TestCase проверка дизлайков",
     "statistic" : {
       "failed" : 0,
       "broken" : 0,
       "skipped" : 0,
-      "passed" : 3,
+      "passed" : 4,
       "unknown" : 0,
-      "total" : 3
+      "total" : 4
     }
   } ]
 }
