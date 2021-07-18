@@ -1,0 +1,68 @@
+{
+  "uid" : "8a040df7f4066b7d",
+  "name" : "3. Проверка что кот удален",
+  "fullName" : "3. Проверка что кот удален",
+  "historyId" : "5e9abe54c63bcda56cd283a129d0cccc",
+  "time" : {
+    "start" : 1626594075433,
+    "stop" : 1626594075609,
+    "duration" : 176
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "выполнен повторный запрос DELETE /remove c параметром 102424",
+      "time" : {
+        "start" : 1626594075609,
+        "stop" : 1626594075609,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Найти случайного кота, удалить, проверить что удален"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ {
+      "uid" : "c054213590a0b8ce",
+      "status" : "passed",
+      "time" : {
+        "start" : 1626594050897,
+        "stop" : 1626594051111,
+        "duration" : 214
+      }
+    } ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "8a040df7f4066b7d.json",
+  "parameterValues" : [ ]
+}

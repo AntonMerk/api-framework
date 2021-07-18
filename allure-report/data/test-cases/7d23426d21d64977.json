@@ -1,0 +1,64 @@
+{
+  "uid" : "7d23426d21d64977",
+  "name" : "1. Поиск случайного кота",
+  "fullName" : "1. Поиск случайного кота",
+  "historyId" : "e24996ddbe9ad98a701d9af10c8392ac",
+  "time" : {
+    "start" : 1626594050037,
+    "stop" : 1626594050687,
+    "duration" : 650
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "выполнен запрос GET /get-by-id c параметром 102631",
+      "time" : {
+        "start" : 1626594050685,
+        "stop" : 1626594050685,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ ],
+      "parameters" : [ ],
+      "hasContent" : false,
+      "stepsCount" : 0,
+      "attachmentsCount" : 0,
+      "shouldDisplayMessage" : false
+    } ],
+    "attachments" : [ {
+      "uid" : "bd0baa72e62ba3aa",
+      "name" : "Информация найденном о коте (json)",
+      "source" : "bd0baa72e62ba3aa.json",
+      "type" : "application/json",
+      "size" : 159
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 1,
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : false
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "parentSuite",
+    "value" : "Найти случайного кота, удалить, проверить что удален"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : true,
+  "retry" : true,
+  "extra" : {
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "7d23426d21d64977.json",
+  "parameterValues" : [ ]
+}

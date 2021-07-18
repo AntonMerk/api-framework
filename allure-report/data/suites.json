@@ -1,0 +1,48 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "Найти случайного кота, удалить, проверить что удален",
+    "children" : [ {
+      "name" : "1. Поиск случайного кота",
+      "uid" : "76b8ee462acc8f45",
+      "parentUid" : "b58268f03ae5293bfedfd6d38800dc9f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1626594074591,
+        "stop" : 1626594075251,
+        "duration" : 660
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "2. Удаление кота",
+      "uid" : "245aa626e00d3ad7",
+      "parentUid" : "b58268f03ae5293bfedfd6d38800dc9f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1626594075252,
+        "stop" : 1626594075432,
+        "duration" : 180
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "3. Проверка что кот удален",
+      "uid" : "8a040df7f4066b7d",
+      "parentUid" : "b58268f03ae5293bfedfd6d38800dc9f",
+      "status" : "passed",
+      "time" : {
+        "start" : 1626594075433,
+        "stop" : 1626594075609,
+        "duration" : 176
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "b58268f03ae5293bfedfd6d38800dc9f"
+  } ]
+}

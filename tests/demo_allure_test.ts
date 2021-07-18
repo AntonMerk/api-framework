@@ -5,8 +5,8 @@ import Steps from '../src/steps/Steps';
 
 describe('Проверка имени кота', async () => {
   it('allure', async () => {
-    const name = 'Вики';
-    const id = 101368;
+    const name = 'Абвргрогрооророророттивмпвмпвмпвм';
+    const id = 2039537;
 
     const response = await CoreApi.getCatById(id);
     allure.logStep(`выполнен запрос GET /get-by-id c параметром ${id}`);

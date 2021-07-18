@@ -1,0 +1,31 @@
+[ {
+  "uid" : "76b8ee462acc8f45",
+  "name" : "1. Поиск случайного кота",
+  "time" : {
+    "start" : 1626594074591,
+    "stop" : 1626594075251,
+    "duration" : 660
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "245aa626e00d3ad7",
+  "name" : "2. Удаление кота",
+  "time" : {
+    "start" : 1626594075252,
+    "stop" : 1626594075432,
+    "duration" : 180
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "8a040df7f4066b7d",
+  "name" : "3. Проверка что кот удален",
+  "time" : {
+    "start" : 1626594075433,
+    "stop" : 1626594075609,
+    "duration" : 176
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
