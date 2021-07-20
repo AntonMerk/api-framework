@@ -8,14 +8,18 @@ let randomId;
 
 describe('Найти случайного кота, удалить, проверить что удален', async () => {
   it('1. Поиск случайного кота (allure1)', async () => {
+    console.log('Поиск случайного кота');
+
     //Получение случайного ID
     const responseAllCats = await CoreApi.getAllCats();
     const randomNumberOfGroups = getRandomInt(responseAllCats.data.groups.length);
     const randomNumberOfCats = getRandomInt(responseAllCats.data.groups[randomNumberOfGroups].cats.length);
     randomId = responseAllCats.data.groups[randomNumberOfGroups].cats[randomNumberOfCats].id;
+    console.log(`Найден ID ${randomId}`);
 
     //Получение случайного кота
     const responseRandomCat = await CoreApi.getCatById(randomId);
+    console.log(`Получен кот ${responseRandomCat.data.cat.name}`);
 
     //Добавление информации о найденном случайном коте в отчет
     allure.logStep(`Найден случайный ID ${randomId}`);
@@ -32,7 +36,8 @@ describe('Найти случайного кота, удалить, провер
 
   it('2. Удаление кота (allure2)', async () => {
       //Удаление кота
-      const responseDeleteCat = await CoreApi.removeCat(randomId)
+      const responseDeleteCat = await CoreApi.removeCat(randomId);
+      console.log('Кот удален');
 
       //Добавление информации об удаленном коте в отчет
       allure.logStep(`Выполнен запрос DELETE /remove c параметром ${randomId}`);
@@ -53,6 +58,7 @@ describe('Найти случайного кота, удалить, провер
 
       //Проверка что кот удален (не найден в БД)
       assert.equal(responseDeleteCat.statusText, 'Not Found', 'Статус не соответствует');
+      console.log('Проверено что кот удален');
   });
 
 

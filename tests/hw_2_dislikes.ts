@@ -11,14 +11,18 @@ let m = 3; //Количество дизлайков, которое надо п
 
 describe('TestCase проверка дизлайков', async () => {
     it('1. Поиск случайного кота (allure1)', async () => {
+        console.log('Поиск случайного кота');
+
         //Получение случайного ID
         const responseAllCats = await CoreApi.getAllCats();
         const randomNumberOfGroups = getRandomInt(responseAllCats.data.groups.length);
         const randomNumberOfCats = getRandomInt(responseAllCats.data.groups[randomNumberOfGroups].cats.length);
         randomId = responseAllCats.data.groups[randomNumberOfGroups].cats[randomNumberOfCats].id;
+        console.log(`Найден ID ${randomId}`);
 
         //Получение случайного кота
         const responseRandomCat = await CoreApi.getCatById(randomId);
+        console.log(`Получен кот ${responseRandomCat.data.cat.name}`);
 
         //Добавление информации о найденном случайном коте в отчет
         allure.logStep(`Найден случайный ID ${randomId}`);
@@ -39,9 +43,10 @@ describe('TestCase проверка дизлайков', async () => {
 
         //Сохранение количества лайков
         numberOfDislikes = responseRandomCat.data.cat.dislikes;
+        console.log(`У кота ${responseRandomCat.data.cat.dislikes} дизлайк(ов)`);
 
         //Вывод информации о количестве лайков в отчет
-        allure.logStep(`У кота ${numberOfDislikes} дизлайков`);
+        allure.logStep(`У кота ${numberOfDislikes} дизлайк(ов)`);
 
         //Проверка статус кода
         assert.equal(responseRandomCat.status, 200, 'Статус не соответствует');
@@ -55,6 +60,7 @@ describe('TestCase проверка дизлайков', async () => {
             //Проверка статус кода (что лайки проставляются)
             assert.equal(responseDislikeCat.status, 200, 'Статус не соответствует');
         }
+        console.log(`Поставлено коту ${m} дизлайк(ов)`);
 
         //Сохраняем сколько теперь должно быть дизлайков у кота
         numberOfDislikes = numberOfDislikes + m;
@@ -79,6 +85,7 @@ describe('TestCase проверка дизлайков', async () => {
 
         //Проверка что количество лайков соответствует ожидаемому (увеличилось на n)
         assert.equal(responseRandomCat.data.cat.dislikes, numberOfDislikes, 'Количество лайков не соответствует');
+        console.log(`Теперь у кота ${numberOfDislikes} дизлайк(ов)`);
     });
 
 });
